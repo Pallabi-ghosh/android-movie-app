@@ -1,16 +1,17 @@
 package com.example.myapplication
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.data.movirepository.MoviesRepository
+import com.example.myapplication.data.tranding.Trending
+import com.example.myapplication.data.tranding.TrendingAdapter
+import com.example.myapplication.data.trandingrepository.TrendingRepository
 import com.example.myapplication.data.tv.TvAdapter
 import com.example.myapplication.data.tv.TvShows
 import com.example.myapplication.data.tvrepository.TvRepository
-import com.example.myapplication.data.tvrepository.TvRepository.getPopularTvShows
 import com.example.myapplication.movie.Movie
 import com.example.myapplication.movie.MoviesAdapter
 
@@ -28,6 +29,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var popularTvLayoutMgr: LinearLayoutManager
 
     private var popularTvPage = 1
+
+    private lateinit var trendingShows: RecyclerView
+    private lateinit var trendingAdapter: TrendingAdapter
+    private lateinit var trendingLayoutMgr: LinearLayoutManager
+
+    private var trendingPage = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,6 +74,23 @@ class MainActivity : AppCompatActivity() {
             ::onPopularTvShowsFetched,
             ::onError
         )
+        trendingShows = findViewById(R.id.popular_tranding_shows)
+        trendingLayoutMgr = LinearLayoutManager(
+            this,
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
+        trendingShows.layoutManager = trendingLayoutMgr
+        trendingAdapter = TrendingAdapter(mutableListOf())
+        trendingShows.adapter = trendingAdapter
+
+        getTrendingShows()
+
+        TrendingRepository.getTrendingShows(
+            trendingPage,
+            ::onPopularTrendingShowsFetched,
+            ::onError
+        )
     }
 
 
@@ -87,6 +111,14 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    private fun getTrendingShows() {
+        TrendingRepository.getTrendingShows(
+            trendingPage,
+            ::onPopularTrendingShowsFetched,
+            ::onError
+        )
+    }
+
     private fun onPopularMoviesFetched(movies: List<Movie>) {
         popularMoviesAdapter.appendMovies(movies)
         attachPopularMoviesOnScrollListener()
@@ -97,6 +129,9 @@ class MainActivity : AppCompatActivity() {
         attachPopularMoviesOnScrollListener()
     }
 
+    private fun onPopularTrendingShowsFetched(trending: List<Trending>) {
+        trendingAdapter.appendTrending(trending)
+    }
 
     private fun attachPopularMoviesOnScrollListener() {
         popularMovies.addOnScrollListener(object : RecyclerView.OnScrollListener() {

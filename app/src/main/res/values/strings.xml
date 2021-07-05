@@ -14,4 +14,11 @@
     <string name="highest_rated_tv_shows">Highest rated tv shows of all time</string>
     <string name="upcoming_tv_shows">Upcoming</string>
     <string name="stay_updated_tv_shows">Stay updated with the latest tv shows</string>
+
+    <string name="most_popular_trending_shows">Most popular trending shows</string>
+    <string name="error_fetch_trending_shows">Please check your internet connection</string>
+    <string name="top_rated_trending_shows">Top Rated</string>
+    <string name="highest_rated_trending_shows">Highest rated trending shows of all time</string>
+    <string name="upcoming_trending_shows">Upcoming</string>
+    <string name="stay_updated_trending_shows">Stay updated with the latest trending shows</string>
 </resources>
