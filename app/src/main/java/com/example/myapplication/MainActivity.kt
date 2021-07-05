@@ -7,8 +7,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.data.movirepository.MoviesRepository
+import com.example.myapplication.data.tv.TvAdapter
+import com.example.myapplication.data.tv.TvShows
+import com.example.myapplication.data.tvrepository.TvRepository
+import com.example.myapplication.data.tvrepository.TvRepository.getPopularTvShows
 import com.example.myapplication.movie.Movie
 import com.example.myapplication.movie.MoviesAdapter
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +22,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var popularMoviesLayoutMgr: LinearLayoutManager
 
     private var popularMoviesPage = 1
+
+    private lateinit var popularTvShows: RecyclerView
+    private lateinit var popularTvAdapter: TvAdapter
+    private lateinit var popularTvLayoutMgr: LinearLayoutManager
+
+    private var popularTvPage = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +50,26 @@ class MainActivity : AppCompatActivity() {
             ::onPopularMoviesFetched,
             ::onError
         )
+        popularTvShows = findViewById(R.id.popular_tv_shows)
+        popularTvLayoutMgr = LinearLayoutManager(
+            this,
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
+        popularTvShows.layoutManager = popularTvLayoutMgr
+        popularTvAdapter = TvAdapter(mutableListOf())
+        popularTvShows.adapter = popularTvAdapter
+
+        getPopularTvShows()
+
+        TvRepository.getPopularTvShows(
+            popularTvPage,
+            ::onPopularTvShowsFetched,
+            ::onError
+        )
     }
+
+
 
     private fun getPopularMovies() {
         MoviesRepository.getPopularMovies(
@@ -49,10 +79,24 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    private fun getPopularTvShows() {
+        TvRepository.getPopularTvShows(
+            popularTvPage,
+            ::onPopularTvShowsFetched,
+            ::onError
+        )
+    }
+
     private fun onPopularMoviesFetched(movies: List<Movie>) {
         popularMoviesAdapter.appendMovies(movies)
         attachPopularMoviesOnScrollListener()
     }
+
+    private fun onPopularTvShowsFetched(tvshows: List<TvShows>) {
+        popularTvAdapter.appendTv(tvshows)
+        attachPopularMoviesOnScrollListener()
+    }
+
 
     private fun attachPopularMoviesOnScrollListener() {
         popularMovies.addOnScrollListener(object : RecyclerView.OnScrollListener() {

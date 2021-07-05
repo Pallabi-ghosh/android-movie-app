@@ -7,4 +7,11 @@
     <string name="highest_rated_movies">Highest rated movies of all time</string>
     <string name="upcoming">Upcoming</string>
     <string name="stay_updated">Stay updated with the latest movies</string>
+
+    <string name="most_popular_tv_shows">Most popular tv shows</string>
+    <string name="error_fetch_tv_shows">Please check your internet connection</string>
+    <string name="top_rated_tv_shows">Top Rated</string>
+    <string name="highest_rated_tv_shows">Highest rated tv shows of all time</string>
+    <string name="upcoming_tv_shows">Upcoming</string>
+    <string name="stay_updated_tv_shows">Stay updated with the latest tv shows</string>
 </resources>
