@@ -1,4 +1,5 @@
 package com.example.myapplication.movie
+import com.google.gson.annotations.SerializedName
 
 data class Movie(
     @SerializedName("id") val id: Long,
