@@ -5,7 +5,7 @@
 To test this code you will need to:
 
 1. Get an API Key from TMDB
-2. Create a file on the Utils package with: const val SECRET_KEY = "PLACE YOUR API KEY HERE"
+2. Create a file on the Utils package with: const val SECRET_KEY = "PLACE MY API KEY HERE"
 3. Api tested in Postman 
 
 Base URL = "https://api.themoviedb.org/3/"
@@ -14,14 +14,12 @@ Base URL = "https://api.themoviedb.org/3/"
 
 
 1. Kotlin
-2. Dagger 2 (For Dependency Injection)
+2. ./gradlew build
 3. rxJava (For Managing Background Tasks)
 4. Retrofit (For Networking)
 5. Postman
 6. ViewModel (For managing UI related data in a lifecycle conscious way)
-7. LiveData (For notifying views of data changes)
-8. Clean Architecture
-9. MVVM
+
 
 ## Create a New Project
 
@@ -72,6 +70,6 @@ TMDb has thousands and thousands of movies in their database. Especially, when m
 1. Open Api and I can see a the page parameter.    
 2. Create a new method called getPopularMovies(). 
 3. Create a new method called attachPopularMoviesOnScrollListener().
-4. Run the app. Keep scrolling and notice that it now fetches a new batch of movies. Good job! :clap:
+4. Run the app. 
 
 P.S The same way I have done Popular Tv shows and Trending shows as well. I took the API from TMDB and then showcase popular tv shows and trending shows in this app.
