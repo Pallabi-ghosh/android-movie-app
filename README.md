@@ -1,4 +1,4 @@
-:woman_technologist:# android-movie-app 
+# android-movie-app :woman_technologist:
 
 🎬Application that displays a list of Movies, TV shows and Trending using the Modern Android Application Development tools and API's.
 
@@ -71,6 +71,7 @@ While scrolling through the list, notice that you only see a limited number of m
 TMDb has thousands and thousands of movies in their database. Especially, when most of the time the user won’t scroll all of it. That’s why they paginate their movies API.
 
 1. Open Api and I can see a the page parameter.
+
     class MoviesAdapter(
          private var movies: MutableList<Movie>
      ) : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
@@ -83,8 +84,4 @@ TMDb has thousands and thousands of movies in their database. Especially, when m
                  movies.size - 1
              )
          }
-    
-         ...
-    }
-    
     
