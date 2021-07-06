@@ -17,12 +17,11 @@ Base URL = "https://api.themoviedb.org/3/"
 2. Dagger 2 (For Dependency Injection)
 3. rxJava (For Managing Background Tasks)
 4. Retrofit (For Networking)
-5. JetPack
+5. Postman
 6. ViewModel (For managing UI related data in a lifecycle conscious way)
 7. LiveData (For notifying views of data changes)
 8. Clean Architecture
 9. MVVM
-10.Postman
 
 ## Create a New Project
 
@@ -70,19 +69,7 @@ Take a deep breath and relax. :grinning:
 While scrolling through the list, notice that you only see a limited number of movies. 
 TMDb has thousands and thousands of movies in their database. Especially, when most of the time the user won’t scroll all of it. That’s why they paginate their movies API.
 
-1. Open Api and I can see a the page parameter.
-
-    class MoviesAdapter(
-         private var movies: MutableList<Movie>
-     ) : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
-         fun appendMovies(movies: List<Movie>) {
-             this.movies.addAll(movies)
-             notifyItemRangeInserted(
-                 this.movies.size,
-                 movies.size - 1
-             )
-         }
-      
+1. Open Api and I can see a the page parameter.    
 2. Create a new method called getPopularMovies(). 
 3. Create a new method called attachPopularMoviesOnScrollListener().
 4. Run the app. Keep scrolling and notice that it now fetches a new batch of movies. Good job! :clap:
