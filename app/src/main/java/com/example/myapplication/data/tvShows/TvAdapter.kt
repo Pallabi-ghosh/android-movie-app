@@ -1,4 +1,4 @@
-package com.example.myapplication.data.tv
+package com.example.myapplication.data.tvShows
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.R
-import com.example.myapplication.data.tv.TvShows
+import com.example.myapplication.data.tvShows.datamodel.TvShows
 
 
 class TvAdapter (

@@ -1,6 +1,5 @@
-package com.example.myapplication.data
+package com.example.myapplication.data.tvShows.datamodel
 
-import com.example.myapplication.data.tv.TvShows
 import com.google.gson.annotations.SerializedName
 
 class GetTvResponse (

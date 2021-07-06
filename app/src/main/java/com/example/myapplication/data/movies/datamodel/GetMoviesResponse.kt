@@ -1,6 +1,6 @@
-package com.example.myapplication.data
+package com.example.myapplication.data.movies.datamodel
 
-import com.example.myapplication.movie.Movie
+import com.example.myapplication.data.movies.datamodel.Movie
 import com.google.gson.annotations.SerializedName
 
 data class GetMoviesResponse(

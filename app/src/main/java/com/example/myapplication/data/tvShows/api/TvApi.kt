@@ -1,7 +1,7 @@
-package com.example.myapplication.data.api
+package com.example.myapplication.data.tvShows.api
 
 
-import com.example.myapplication.data.GetTvResponse
+import com.example.myapplication.data.tvShows.datamodel.GetTvResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

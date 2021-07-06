@@ -1,8 +1,8 @@
-package com.example.myapplication.data.tvrepository
+package com.example.myapplication.data.tvShows
 
-import com.example.myapplication.data.GetTvResponse
-import com.example.myapplication.data.api.TvApi
-import com.example.myapplication.data.tv.TvShows
+import com.example.myapplication.data.tvShows.api.TvApi
+import com.example.myapplication.data.tvShows.datamodel.GetTvResponse
+import com.example.myapplication.data.tvShows.datamodel.TvShows
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,7 +26,7 @@ object TvRepository {
         onSuccess: (tvshows: List<TvShows>) -> Unit,
         onError: () -> Unit
     ){
-        TvRepository.tvApi.getPopularTvShows(page = page)
+        tvApi.getPopularTvShows(page = page)
             .enqueue(object : Callback<GetTvResponse> {
                 override fun onResponse(
                     call: Call<GetTvResponse>,

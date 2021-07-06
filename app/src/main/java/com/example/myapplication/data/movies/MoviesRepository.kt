@@ -1,12 +1,11 @@
-package com.example.myapplication.data.movirepository
+package com.example.myapplication.data.movies
 
-import android.util.Log
-import com.example.myapplication.data.api.Api
+import com.example.myapplication.data.movies.api.Api
+import com.example.myapplication.data.movies.datamodel.GetMoviesResponse
+import com.example.myapplication.data.movies.datamodel.Movie
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.Call
-import com.example.myapplication.data.GetMoviesResponse
-import com.example.myapplication.movie.Movie
 import retrofit2.Callback
 import retrofit2.Response
 

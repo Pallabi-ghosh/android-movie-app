@@ -1,10 +1,10 @@
-package com.example.myapplication.data.tranding
+package com.example.myapplication.data.tvShows.datamodel
 
 import com.google.gson.annotations.SerializedName
 
-data class Trending (
+class TvShows(
     @SerializedName("id") val id: Long,
-    @SerializedName("title") val title: String,
+    @SerializedName("name") val title: String,
     @SerializedName("overview") val overview: String,
     @SerializedName("poster_path") val posterPath: String,
     @SerializedName("backdrop_path") val backdropPath: String,

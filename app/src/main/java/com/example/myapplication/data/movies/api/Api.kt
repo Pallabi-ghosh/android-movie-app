@@ -1,6 +1,6 @@
-package com.example.myapplication.data.api
+package com.example.myapplication.data.movies.api
 
-import com.example.myapplication.data.GetMoviesResponse
+import com.example.myapplication.data.movies.datamodel.GetMoviesResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

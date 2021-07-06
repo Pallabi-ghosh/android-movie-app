@@ -1,6 +1,5 @@
-package com.example.myapplication.data
+package com.example.myapplication.data.trending.datamodel
 
-import com.example.myapplication.data.tranding.Trending
 import com.google.gson.annotations.SerializedName
 
 data class GetTrendingShowsResponse (
