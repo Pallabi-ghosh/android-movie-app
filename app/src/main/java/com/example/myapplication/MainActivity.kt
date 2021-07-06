@@ -126,7 +126,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun onPopularTvShowsFetched(tvshows: List<TvShows>) {
         popularTvAdapter.appendTv(tvshows)
-        attachPopularMoviesOnScrollListener()
     }
 
     private fun onPopularTrendingShowsFetched(trending: List<Trending>) {
