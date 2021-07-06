@@ -1,8 +1,8 @@
-package com.example.myapplication.data.movies
+package com.example.myapplication.sourceCode.movies
 
-import com.example.myapplication.data.movies.api.Api
-import com.example.myapplication.data.movies.datamodel.GetMoviesResponse
-import com.example.myapplication.data.movies.datamodel.Movie
+import com.example.myapplication.sourceCode.movies.api.Api
+import com.example.myapplication.sourceCode.movies.datamodel.GetMoviesResponse
+import com.example.myapplication.sourceCode.movies.datamodel.Movie
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.Call

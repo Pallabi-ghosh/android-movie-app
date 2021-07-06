@@ -1,4 +1,4 @@
-package com.example.myapplication.data.tvShows.datamodel
+package com.example.myapplication.sourceCode.tvShows.datamodel
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,4 +1,4 @@
-package com.example.myapplication.data.trending
+package com.example.myapplication.sourceCode.trending
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.R
-import com.example.myapplication.data.trending.datamodel.Trending
+import com.example.myapplication.sourceCode.trending.datamodel.Trending
 
 
 class TrendingAdapter (

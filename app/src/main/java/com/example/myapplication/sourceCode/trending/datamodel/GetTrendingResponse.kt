@@ -1,4 +1,4 @@
-package com.example.myapplication.data.trending.datamodel
+package com.example.myapplication.sourceCode.trending.datamodel
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,6 +1,6 @@
-package com.example.myapplication.data.trending.api
+package com.example.myapplication.sourceCode.trending.api
 
-import com.example.myapplication.data.trending.datamodel.GetTrendingShowsResponse
+import com.example.myapplication.sourceCode.trending.datamodel.GetTrendingShowsResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

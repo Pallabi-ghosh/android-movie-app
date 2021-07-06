@@ -1,4 +1,4 @@
-package com.example.myapplication.data.movies
+package com.example.myapplication.sourceCode.movies
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.R
-import com.example.myapplication.data.movies.datamodel.Movie
+import com.example.myapplication.sourceCode.movies.datamodel.Movie
 
 class MoviesAdapter(
     private var movies: MutableList<Movie>

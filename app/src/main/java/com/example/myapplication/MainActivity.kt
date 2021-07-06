@@ -5,15 +5,15 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.data.movies.MoviesRepository
-import com.example.myapplication.data.trending.datamodel.Trending
-import com.example.myapplication.data.trending.TrendingAdapter
-import com.example.myapplication.data.trending.TrendingRepository
-import com.example.myapplication.data.tvShows.TvAdapter
-import com.example.myapplication.data.tvShows.datamodel.TvShows
-import com.example.myapplication.data.tvShows.TvRepository
-import com.example.myapplication.data.movies.datamodel.Movie
-import com.example.myapplication.data.movies.MoviesAdapter
+import com.example.myapplication.sourceCode.movies.MoviesRepository
+import com.example.myapplication.sourceCode.trending.datamodel.Trending
+import com.example.myapplication.sourceCode.trending.TrendingAdapter
+import com.example.myapplication.sourceCode.trending.TrendingRepository
+import com.example.myapplication.sourceCode.tvShows.TvAdapter
+import com.example.myapplication.sourceCode.tvShows.datamodel.TvShows
+import com.example.myapplication.sourceCode.tvShows.TvRepository
+import com.example.myapplication.sourceCode.movies.datamodel.Movie
+import com.example.myapplication.sourceCode.movies.MoviesAdapter
 
 
 class MainActivity : AppCompatActivity() {

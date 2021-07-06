@@ -1,8 +1,8 @@
-package com.example.myapplication.data.tvShows
+package com.example.myapplication.sourceCode.tvShows
 
-import com.example.myapplication.data.tvShows.api.TvApi
-import com.example.myapplication.data.tvShows.datamodel.GetTvResponse
-import com.example.myapplication.data.tvShows.datamodel.TvShows
+import com.example.myapplication.sourceCode.tvShows.api.TvApi
+import com.example.myapplication.sourceCode.tvShows.datamodel.GetTvResponse
+import com.example.myapplication.sourceCode.tvShows.datamodel.TvShows
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
