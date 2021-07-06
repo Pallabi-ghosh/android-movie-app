@@ -72,3 +72,5 @@ TMDb has thousands and thousands of movies in their database. Especially, when m
 4. Run the app. 
 
 P.S The same way I have done Popular Tv shows and Trending shows as well. I took the API from TMDB and then showcase popular tv shows and trending shows in this app.
+
+<img width="388" alt="Screenshot 2021-07-06 at 08 58 22" src="https://user-images.githubusercontent.com/61879499/124556254-59bc9c80-de38-11eb-9492-82341f430474.png">
