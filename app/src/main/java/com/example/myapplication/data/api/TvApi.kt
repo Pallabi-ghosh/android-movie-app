@@ -8,8 +8,8 @@ import retrofit2.http.Query
 
 interface TvApi {
     @GET("tv/popular")
-    abstract fun getPopularTvShows(
-        @Query("api_key") apiKey: String = "5e575735f7b8c4d22dd904565060e017",
+    fun getPopularTvShows(
+        @Query("api_key") apiKey: String = com.example.myapplication.BuildConfig.apikey,
         @Query("page") page: Int
     ): Call<GetTvResponse>
 }

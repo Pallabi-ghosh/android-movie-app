@@ -9,7 +9,7 @@ interface Api {
 
     @GET("movie/popular")
     fun getPopularMovies(
-        @Query("api_key") apiKey: String = "5e575735f7b8c4d22dd904565060e017",
+        @Query("api_key") apiKey: String = com.example.myapplication.BuildConfig.apikey,
         @Query("page") page: Int
     ): Call<GetMoviesResponse>
 }

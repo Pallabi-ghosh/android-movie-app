@@ -7,8 +7,8 @@ import retrofit2.http.Query
 
 interface TrendingApi {
     @GET("trending/all/day")
-    abstract fun getTrendingShows(
-        @Query("api_key") apiKey: String = "5e575735f7b8c4d22dd904565060e017",
+    fun getTrendingShows(
+        @Query("api_key") apiKey: String = com.example.myapplication.BuildConfig.apikey,
         @Query("page") page: Int
     ): Call<GetTrendingShowsResponse>
 }

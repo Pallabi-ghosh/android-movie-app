@@ -60,7 +60,6 @@ Now that I can finally fetch movies from TMDb, it’s time to show these movies 
 4. Open the MainActivity and instantiate RecyclerView and Adapter.
 5. Run the app. Scroll through the list and I can see all the movies poster and I have achieved half way. 
 
-Take a deep breath and relax. :grinning:
 
 ## Pagination
 
