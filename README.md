@@ -75,8 +75,6 @@ TMDb has thousands and thousands of movies in their database. Especially, when m
     class MoviesAdapter(
          private var movies: MutableList<Movie>
      ) : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
-         ...
-    
          fun appendMovies(movies: List<Movie>) {
              this.movies.addAll(movies)
              notifyItemRangeInserted(
@@ -84,4 +82,9 @@ TMDb has thousands and thousands of movies in their database. Especially, when m
                  movies.size - 1
              )
          }
-    
+      
+2. Create a new method called getPopularMovies(). 
+3. Create a new method called attachPopularMoviesOnScrollListener().
+4. Run the app. Keep scrolling and notice that it now fetches a new batch of movies. Good job! :clap:
+
+P.S The same way I have done Popular Tv shows and Trending shows as well. I took the API from TMDB and then showcase popular tv shows and trending shows in this app.
